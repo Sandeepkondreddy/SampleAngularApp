@@ -1,0 +1,28 @@
+<div class="form-froup row">
+
+    <label class="col-sm-4 col-form-label">Branch Code</label>
+    <div class="col-sm-8">
+        <input type="text" class="form-control" [(ngModel)]="BranchCode"
+        placeholder="Enter Branch Code">
+    </div>
+
+    <label class="col-sm-4 col-form-label">Branch Name</label>
+    <div class="col-sm-8">
+        <input type="text" class="form-control" [(ngModel)]="BranchName"
+        placeholder="Enter Branch Name">
+    </div>
+
+    <label class="col-sm-4 col-form-label">Remarks</label>
+    <div class="col-sm-8">
+        <input type="text" class="form-control" [(ngModel)]="Remarks"
+        placeholder="Enter Remarks">
+    </div>
+</div>
+
+
+<button (click)="addBranch()" *ngIf="branch.BranchId==0" class="btn btn-primary">
+    Add
+</button>
+<button (click)="updateBranch()" *ngIf="branch.BranchId!=0" class="btn btn-primary">
+    Update
+</button>
